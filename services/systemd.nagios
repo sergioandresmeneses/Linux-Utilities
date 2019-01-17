@@ -1,0 +1,14 @@
+#Systemd Service for Nagios
+#
+[Unit]
+Description=Nagios
+BindTo=network.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+User=nagios
+Group=nagcmd
+ExecStart=/usr/local/nagios/bin/nagios /usr/local/nagios/etc/nagios.cfg

@@ -1,0 +1,7 @@
+#Init service for the Nagios service.
+#
+DESC="Nagios"
+NAME=nagios
+DAEMON=/usr/local/nagios/bin/$NAME
+DAEMON_ARGS="-d /usr/local/nagios/etc/nagios.cfg"
+PIDFILE=/usr/local/nagios/var/$NAME.lock
